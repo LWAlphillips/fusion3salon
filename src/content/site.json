@@ -14,7 +14,7 @@
     "textHref": "+19253034874",
     "email": "pleasanton@fusion3salon.com",
     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Fusion+3+Salon+722+Main+Street+Pleasanton+CA+94566",
-    "bookingUrl": "https://fusion3.bookedby.com",
+    "bookingUrl": "https://fusion3.bookedby.com/new-order/select-service?storeUid%3Dc0b10865-d771-422d-80fe-7ddfa4125294",
     "giftCardUrl": "https://fusion3.bookedby.com/gift-cards-purchase",
     "social": {
       "instagram": "https://www.instagram.com/Fusion3Salon",
@@ -73,7 +73,7 @@
       "title": "Best in East Bay, again",
       "text": "Thank you for voting us East Bay Times Best in East Bay 2026 — and for 11 years in the Best of East Bay Hall of Fame.",
       "linkText": "Book your visit",
-      "linkUrl": "https://fusion3.bookedby.com",
+      "linkUrl": "https://fusion3.bookedby.com/new-order/select-service?storeUid%3Dc0b10865-d771-422d-80fe-7ddfa4125294",
       "image": "/images/award-best-in-east-bay-2026.png",
       "imageAlt": "East Bay Times Best in East Bay 2026 award",
       "ends": ""
@@ -105,8 +105,8 @@
       "linkUrl": "/specials/new-guest/"
     },
     {
-      "title": "Refer a Friend, Get $50",
-      "text": "Send a friend our way. When they come in for their first visit, you get a $50 Fusion 3 salon credit.",
+      "title": "Refer a Friend: They Get $20, You Get $50",
+      "text": "Send a friend a $20 voucher for their first visit. After they come in, we add a $50 Fusion 3 credit to your account.",
       "linkText": "Send a referral voucher",
       "linkUrl": "/specials/refer/"
     },
@@ -284,14 +284,14 @@
       ]
     },
     "referral": {
-      "amount": "$50",
-      "headline": "Your friend thinks you'll love Fusion 3",
-      "text": "Show this voucher at your first visit and tell us who sent you. As a thank-you, your friend receives a $50 Fusion 3 salon credit.",
-      "shareText": "I love my salon, Fusion 3 in Pleasanton. Show them this voucher at your first visit and tell them I sent you:",
+      "amount": "$20",
+      "headline": "A friend sent you $20 off your first visit",
+      "text": "Show this voucher at your first visit and tell us who referred you. You get $20 off, and as a thank-you, your friend gets a $50 Fusion 3 salon credit.",
+      "shareText": "I love my salon, Fusion 3 in Pleasanton. Here's $20 off your first visit. Just show this voucher and tell them I sent you:",
       "finePrint": [
-        "Valid for guests new to Fusion 3 Salon.",
-        "The $50 credit goes to the referring guest after their friend's first completed service.",
-        "Credits have no cash value and can't be combined with other offers."
+        "For guests new to Fusion 3 Salon. One voucher per guest.",
+        "The referring guest receives a $50 salon credit on their account after their friend's first completed service.",
+        "No cash value. Not valid with other offers."
       ]
     }
   }

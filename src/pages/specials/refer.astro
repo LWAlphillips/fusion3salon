@@ -5,8 +5,8 @@ import Voucher from "../../components/Voucher.astro";
 import site from "../../content/site.json";
 const v = site.vouchers.referral;
 ---
-<Base title="Refer a Friend, Get $50" description="Refer a friend to Fusion 3 Salon in Pleasanton and receive a $50 salon credit after their first visit.">
-  <PageHero title="Refer a friend, get $50" intro="Tap “Send to a friend” to share this voucher. When they come in and mention your name, you get a $50 salon credit." />
+<Base title="Refer a Friend: They Get $20, You Get $50" description="Send a friend $20 off their first visit to Fusion 3 Salon in Pleasanton, and get a $50 salon credit when they come in.">
+  <PageHero title="Refer a friend: they get $20, you get $50" intro="Tap “Send to a friend” to share this $20 voucher. When they come in and mention your name, we add a $50 credit to your account." />
   <section class="section"><div class="wrap">
     <Voucher amount={v.amount} label="Friend referral" headline={v.headline} text={v.text} finePrint={v.finePrint} shareText={v.shareText} />
   </div></section>
