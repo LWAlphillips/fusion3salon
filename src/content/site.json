@@ -69,32 +69,35 @@
   },
   "featured": [
     {
-      "_help": "Homepage 'Featured' cards for product launches, promos and events. Add, remove or reorder. 'ends' (YYYY-MM-DD) is optional; the card hides itself after that date. 'image' is optional (put the file in public/images/).",
-      "title": "Best in East Bay, again",
-      "text": "Thank you for voting us East Bay Times Best in East Bay 2026 — and for 11 years in the Best of East Bay Hall of Fame.",
+      "_help": "Homepage 'Featured' cards for product launches, promos and events. Add, remove or reorder. 'ends' (YYYY-MM-DD) is optional; the card hides itself after that date. 'image' is optional (put the file in public/images/). 'imageFit': 'cover' fills the box (photos), 'contain' shows the whole image (logos).",
+      "title": "Thank you, Tri-Valley",
+      "text": "We're honored you voted us East Bay Times Best in East Bay 2026. Twenty-six years in, we're grateful to be part of this community.",
       "linkText": "Book your visit",
       "linkUrl": "https://fusion3.bookedby.com/new-order/select-service?storeUid%3Dc0b10865-d771-422d-80fe-7ddfa4125294",
       "image": "/images/award-best-in-east-bay-2026.png",
       "imageAlt": "East Bay Times Best in East Bay 2026 award",
-      "ends": ""
+      "ends": "",
+      "imageFit": "contain"
     },
     {
       "title": "$20 off your first service with us",
       "text": "New to Fusion 3? Here's $20 toward any service you've never had with us before.",
       "linkText": "Get your $20 voucher",
       "linkUrl": "/specials/new-guest/",
-      "image": "",
-      "imageAlt": "",
-      "ends": ""
+      "image": "/images/featured-new-guest.webp",
+      "imageAlt": "Guest with long, tousled golden blonde hair against a blue sky",
+      "ends": "",
+      "imageFit": "cover"
     },
     {
       "title": "Give the Fusion 3 experience",
       "text": "Gift cards for any amount, delivered by email in minutes.",
       "linkText": "Buy a gift card",
       "linkUrl": "https://fusion3.bookedby.com/gift-cards-purchase",
-      "image": "",
-      "imageAlt": "",
-      "ends": ""
+      "image": "/images/featured-gift-cards.webp",
+      "imageAlt": "Lavender and rosemary in a wooden bowl",
+      "ends": "",
+      "imageFit": "cover"
     }
   ],
   "specials": [

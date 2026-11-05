@@ -13,10 +13,10 @@ const t = site.team;
       {t.members.map(m => (
         <li>
           <a class="member" href={m.bookingUrl}>
-            <img src={m.photo} alt="" width="360" height="360" loading="lazy" />
+            <img src={m.photo} alt="" width="130" height="130" loading="lazy" />
             <span class="name">{m.name}</span>
             {m.role && <span class="role">{m.role}</span>}
-            <span class="cta">See services &amp; book <span aria-hidden="true">→</span></span>
+            <span class="cta">Book with {m.name.split(" ")[0]} <span aria-hidden="true">→</span></span>
           </a>
         </li>
       ))}
@@ -25,12 +25,14 @@ const t = site.team;
 </section>
 
 <style>
-  .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.25rem; margin-top: 1.75rem; }
-  .member { display: flex; flex-direction: column; text-decoration: none; color: var(--color-text); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; height: 100%; transition: border-color .15s; }
-  .member:hover { border-color: var(--color-brand); color: var(--color-text); }
-  .member img { width: 100%; aspect-ratio: 1; object-fit: cover; }
-  .name { font-family: var(--font-heading); font-size: 1.2rem; padding: .9rem 1rem 0; }
-  .role { color: var(--color-muted); font-size: .92rem; padding: 0 1rem; }
-  .cta { color: var(--color-brand); font-weight: 600; font-size: .95rem; padding: .4rem 1rem 1rem; margin-top: auto; }
+  .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 1.75rem; }
+  .member { display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none; color: var(--color-text); padding: .5rem; border-radius: var(--radius); height: 100%; }
+  .member:hover { color: var(--color-text); }
+  .member:hover img { box-shadow: 0 0 0 4px var(--color-brand); }
+  .member img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 4px var(--color-surface), 0 0 0 5px var(--color-border); transition: box-shadow .15s; }
+  .name { font-family: var(--font-heading); font-size: 1.15rem; padding-top: .9rem; }
+  .role { color: var(--color-muted); font-size: .92rem; }
+  .cta { color: var(--color-brand); font-weight: 600; font-size: .9rem; padding-top: .2rem; }
   .member:hover .cta { text-decoration: underline; }
+  @media (max-width: 760px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
 </style>

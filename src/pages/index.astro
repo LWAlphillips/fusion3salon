@@ -12,7 +12,7 @@ const years = new Date().getFullYear() - b.since;
     <div class="wrap hero-grid">
       <div>
         <p class="eyebrow">Downtown Pleasanton · Since {b.since}</p>
-        <h1>Hair you'll love, from a team that's been voted the East Bay's best.</h1>
+        <h1>Hair you'll love, from a team the Tri-Valley has trusted since {b.since}.</h1>
         <p class="lead">Fusion 3 is an Aveda and Davines salon on Main Street. For {years}+ years we've been doing cuts, color, balayage and extensions with plant-based products and a team that works together for you.</p>
         <div class="btn-row">
           <a class="btn btn--primary" href={b.bookingUrl}>Book an appointment</a>
@@ -20,7 +20,7 @@ const years = new Date().getFullYear() - b.since;
         </div>
       </div>
       <div class="hero-awards">
-        <img src="/images/award-best-in-east-bay-2026.png" alt="East Bay Times Best in East Bay 2026" width="400" height="356" />
+        <img src="/images/award-best-in-east-bay-2026.png" alt="East Bay Times Best in East Bay 2026 winner" width="600" height="555" />
         <img src="/images/award-hall-of-fame-11-years.png" alt="East Bay Times Best of East Bay Hall of Fame, 11 years" width="400" height="337" />
       </div>
     </div>
@@ -35,7 +35,7 @@ const years = new Date().getFullYear() - b.since;
         <div class="grid grid--3" style="margin-top:1.5rem">
           {featured.map(f => (
             <article class="card" data-ends={f.ends || undefined}>
-              {f.image && <img src={f.image} alt={f.imageAlt} loading="lazy" />}
+              {f.image && <div class={`media media--${f.imageFit || "cover"}`}><img src={f.image} alt={f.imageAlt} loading="lazy" /></div>}
               <h3>{f.title}</h3>
               <p>{f.text}</p>
               {f.linkUrl && <a class="card-link" href={f.linkUrl}>{f.linkText} <span aria-hidden="true">→</span></a>}
@@ -111,6 +111,11 @@ const years = new Date().getFullYear() - b.since;
   .hero-awards img { width: 46%; max-width: 200px; }
   .hero-band { height: clamp(140px, 22vw, 320px); background: url(/images/banner-two-tones.webp) center / cover no-repeat; }
   @media (max-width: 800px) { .hero-grid { grid-template-columns: 1fr; } .hero-awards img { max-width: 150px; } }
+  .media { height: 170px; margin: -1.75rem -1.75rem 1.25rem; border-radius: var(--radius) var(--radius) 0 0; overflow: hidden; background: var(--color-sand); display: flex; align-items: center; justify-content: center; }
+  .media img { margin: 0; max-height: none; }
+  .media--cover img { width: 100%; height: 100%; object-fit: cover; }
+  .media--contain { padding: 1rem; }
+  .media--contain img { width: auto; height: 100%; object-fit: contain; }
   .svc { text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
   .svc:hover { border-color: var(--color-brand); color: inherit; }
   .svc .card-link { color: var(--color-brand); }
