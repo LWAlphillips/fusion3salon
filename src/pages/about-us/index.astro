@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import PageHero from "../../components/PageHero.astro";
 import site from "../../content/site.json";
+import Team from "../../components/Team.astro";
 const b = site.business;
 ---
 <Base title="About Us, Aveda & Davines" description={`Fusion 3 Salon has served Pleasanton and the Tri-Valley since ${b.since}. A team-based Aveda and Davines salon, voted East Bay Times Best in East Bay.`}>
@@ -22,6 +23,8 @@ const b = site.business;
       </div>
     </div>
   </section>
+
+  <Team heading="The Fusion 3 team" />
 
   <section class="section section--sand" id="brands">
     <div class="wrap">

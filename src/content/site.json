@@ -294,5 +294,59 @@
         "No cash value. Not valid with other offers."
       ]
     }
+  },
+  "team": {
+    "_help": "Team members shown on the homepage and About page. Each card links to that person's booking page. To add someone: put a square photo in public/images/team/ and add an entry. 'role' is optional (e.g. 'Master Stylist').",
+    "intro": "Click a stylist to see their services and book with them directly.",
+    "members": [
+      {
+        "name": "Tiffany Guerrero",
+        "role": "",
+        "photo": "/images/team/tiffany-guerrero.webp",
+        "bookingUrl": "https://fusion3.bookedby.com/store/c0b10865-d771-422d-80fe-7ddfa4125294/provider/cf39ff7d-fb2a-44f9-b7cd-5c7a6144487e"
+      },
+      {
+        "name": "Allie Maurer",
+        "role": "",
+        "photo": "/images/team/allie-maurer.webp",
+        "bookingUrl": "https://fusion3.bookedby.com/store/c0b10865-d771-422d-80fe-7ddfa4125294/provider/5721eba1-853e-4706-89ba-67b1f75c1b03"
+      },
+      {
+        "name": "Malina Wiebes",
+        "role": "",
+        "photo": "/images/team/malina-wiebes.webp",
+        "bookingUrl": "https://fusion3.bookedby.com/store/c0b10865-d771-422d-80fe-7ddfa4125294/provider/581a4d65-9c6a-4df9-b9b4-ee7199c2545c"
+      },
+      {
+        "name": "Alysha Sater",
+        "role": "",
+        "photo": "/images/team/alysha-sater.webp",
+        "bookingUrl": "https://fusion3.bookedby.com/store/c0b10865-d771-422d-80fe-7ddfa4125294/provider/157096cc-437f-4f0e-af01-027eda735af0"
+      },
+      {
+        "name": "Lindsay Hunter",
+        "role": "",
+        "photo": "/images/team/lindsay-hunter.webp",
+        "bookingUrl": "https://fusion3.bookedby.com/store/c0b10865-d771-422d-80fe-7ddfa4125294/provider/5cfd81a6-02be-41c4-9722-2a9c3c75f4e5"
+      },
+      {
+        "name": "Savannah Shepherd",
+        "role": "",
+        "photo": "/images/team/savannah-shepherd.webp",
+        "bookingUrl": "https://fusion3.bookedby.com/store/c0b10865-d771-422d-80fe-7ddfa4125294/provider/8c698c4c-a7b2-4467-9641-d615f8cf635b"
+      },
+      {
+        "name": "Nicole Gonzales",
+        "role": "",
+        "photo": "/images/team/nicole-gonzales.webp",
+        "bookingUrl": "https://fusion3.bookedby.com/store/c0b10865-d771-422d-80fe-7ddfa4125294/provider/9345da66-f776-4793-8445-53730615e460"
+      },
+      {
+        "name": "Leila Pila",
+        "role": "",
+        "photo": "/images/team/leila-pila.webp",
+        "bookingUrl": "https://fusion3.bookedby.com/store/c0b10865-d771-422d-80fe-7ddfa4125294/provider/feae402f-9326-43d4-87a5-c07db45832d2"
+      }
+    ]
   }
 }

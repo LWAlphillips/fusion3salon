@@ -1,0 +1,36 @@
+---
+import site from "../content/site.json";
+interface Props { heading?: string; }
+const { heading = "Meet our team" } = Astro.props;
+const t = site.team;
+---
+<section class="section" id="team" aria-labelledby="team-h">
+  <div class="wrap">
+    <p class="eyebrow">Our stylists</p>
+    <h2 id="team-h">{heading}</h2>
+    <p class="muted">{t.intro}</p>
+    <ul class="list-clean team-grid">
+      {t.members.map(m => (
+        <li>
+          <a class="member" href={m.bookingUrl}>
+            <img src={m.photo} alt="" width="360" height="360" loading="lazy" />
+            <span class="name">{m.name}</span>
+            {m.role && <span class="role">{m.role}</span>}
+            <span class="cta">See services &amp; book <span aria-hidden="true">→</span></span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.25rem; margin-top: 1.75rem; }
+  .member { display: flex; flex-direction: column; text-decoration: none; color: var(--color-text); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; height: 100%; transition: border-color .15s; }
+  .member:hover { border-color: var(--color-brand); color: var(--color-text); }
+  .member img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+  .name { font-family: var(--font-heading); font-size: 1.2rem; padding: .9rem 1rem 0; }
+  .role { color: var(--color-muted); font-size: .92rem; padding: 0 1rem; }
+  .cta { color: var(--color-brand); font-weight: 600; font-size: .95rem; padding: .4rem 1rem 1rem; margin-top: auto; }
+  .member:hover .cta { text-decoration: underline; }
+</style>
