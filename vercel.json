@@ -4,6 +4,11 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/wp-content/uploads/2015/03/F3OnlineApp.pdf",
+      "destination": "/about-us/careers/",
+      "permanent": true
+    },
+    {
       "source": "/home/book-now-2/",
       "destination": "https://fusion3.bookedby.com",
       "permanent": true

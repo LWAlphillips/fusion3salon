@@ -269,7 +269,7 @@
       }
     ],
     "applyText": "Email your résumé to pleasanton@fusion3salon.com or stop by the salon.",
-    "applicationPdf": "/wp-content/uploads/2015/03/F3OnlineApp.pdf"
+    "applicationPdf": ""
   },
   "vouchers": {
     "_help": "Wording and fine print for the printable/shareable voucher pages at /specials/new-guest/ and /specials/refer/.",
