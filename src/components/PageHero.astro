@@ -3,9 +3,9 @@ interface Props { title: string; intro?: string; image?: string; eyebrow?: strin
 const { title, intro, image = "/images/banner-botanical-seeds.webp", eyebrow } = Astro.props;
 ---
 <section class="page-hero" style={`background-image:url(${image})`}>
-  <div class="wrap">
+  <div class="wrap"><div class="hero-panel">
     {eyebrow && <p class="eyebrow">{eyebrow}</p>}
     <h1>{title}</h1>
     {intro && <p>{intro}</p>}
-  </div>
+  </div></div>
 </section>

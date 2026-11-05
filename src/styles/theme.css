@@ -23,6 +23,12 @@
 
   /* Shape & spacing */
   --radius: 14px;               /* card corners */
-  --radius-button: 999px;       /* 999px = pill buttons, 8px = squarer */
+  --radius-button: 8px;         /* 8px = softly squared buttons; 999px = pill */
   --max-width: 1120px;
+
+  /* Page header haze (cream overlay on banner photos): left edge / middle / fade-out / phones */
+  --hero-haze-left: .72;
+  --hero-haze-mid: .48;
+  --hero-haze-fade: .08;
+  --hero-haze-mobile: .68;
 }

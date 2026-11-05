@@ -85,7 +85,7 @@
       "linkText": "Get your $20 voucher",
       "linkUrl": "/specials/new-guest/",
       "image": "/images/featured-new-guest.webp",
-      "imageAlt": "Dried eucalyptus sprig on a warm two-tone background",
+      "imageAlt": "Shiny brunette waves with a pink blossom",
       "ends": "",
       "imageFit": "cover"
     },
@@ -95,7 +95,7 @@
       "linkText": "Buy a gift card",
       "linkUrl": "https://fusion3.bookedby.com/gift-cards-purchase",
       "image": "/images/featured-gift-cards.webp",
-      "imageAlt": "Lavender and rosemary in a wooden bowl",
+      "imageAlt": "Red satin gift ribbon and bow",
       "ends": "",
       "imageFit": "cover"
     }
@@ -133,10 +133,6 @@
             "desc": "Includes treatment, shampoo and blow-dry style."
           },
           {
-            "name": "Child's Cut",
-            "desc": "Ages 12 and under."
-          },
-          {
             "name": "Bang Trim",
             "desc": "Complimentary for existing guests."
           },
@@ -162,7 +158,7 @@
           }
         ],
         "image": "/images/svc-cuts.webp",
-        "imageAlt": "Styling tools, comb and hair care bottles on linen"
+        "imageAlt": "Stylist cutting a sleek bob with shears"
       },
       {
         "id": "color",
@@ -203,7 +199,7 @@
           }
         ],
         "image": "/images/svc-color.webp",
-        "imageAlt": "Hair color bowl, tint brush and comb"
+        "imageAlt": "Glossy brunette hair with warm copper dimension"
       },
       {
         "id": "texture",
@@ -224,7 +220,7 @@
           }
         ],
         "image": "/images/svc-texture.webp",
-        "imageAlt": "Hair swatch with tint brushes and a color bowl"
+        "imageAlt": "Long, silky blonde strands"
       },
       {
         "id": "waxing",
@@ -249,7 +245,7 @@
           }
         ],
         "image": "/images/svc-waxing.webp",
-        "imageAlt": "Botanical ingredients: grains, leaves and flowers"
+        "imageAlt": "Fresh lavender sprig"
       }
     ],
     "extras": [
