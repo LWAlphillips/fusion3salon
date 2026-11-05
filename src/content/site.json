@@ -25,38 +25,38 @@
   "hours": [
     {
       "day": "Monday",
-      "open": "6:00 AM",
-      "close": "5:00 PM"
+      "open": "7:15 AM",
+      "close": "2:30 PM"
     },
     {
       "day": "Tuesday",
-      "open": "6:00 AM",
+      "open": "7:00 AM",
       "close": "8:00 PM"
     },
     {
       "day": "Wednesday",
-      "open": "6:00 AM",
-      "close": "8:00 PM"
+      "open": "7:00 AM",
+      "close": "7:00 PM"
     },
     {
       "day": "Thursday",
-      "open": "6:00 AM",
+      "open": "7:15 AM",
       "close": "8:00 PM"
     },
     {
       "day": "Friday",
-      "open": "6:00 AM",
-      "close": "5:00 PM"
+      "open": "7:00 AM",
+      "close": "4:45 PM"
     },
     {
       "day": "Saturday",
-      "open": "6:00 AM",
-      "close": "5:00 PM"
+      "open": "8:00 AM",
+      "close": "4:45 PM"
     },
     {
       "day": "Sunday",
       "open": "8:00 AM",
-      "close": "5:00 PM"
+      "close": "4:45 PM"
     }
   ],
   "hoursNote": "Hours may vary on holidays. Text us anytime.",
