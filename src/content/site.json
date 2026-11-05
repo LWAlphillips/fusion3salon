@@ -160,7 +160,9 @@
             "name": "Consultation",
             "desc": "Complimentary for everyone, and required for new guests."
           }
-        ]
+        ],
+        "image": "/images/svc-cuts.webp",
+        "imageAlt": "Platinum bob with blue color panels"
       },
       {
         "id": "color",
@@ -199,7 +201,9 @@
             "name": "Color Add-ons",
             "desc": "Add demi-color or a few highlights to any color service."
           }
-        ]
+        ],
+        "image": "/images/svc-color.webp",
+        "imageAlt": "Rich brunette and golden blonde hair side by side"
       },
       {
         "id": "texture",
@@ -218,7 +222,9 @@
             "name": "Permanent Waves",
             "desc": "Partial, full-head, spiral and specialty perms."
           }
-        ]
+        ],
+        "image": "/images/svc-texture.webp",
+        "imageAlt": "Long, sleek platinum blonde hair"
       },
       {
         "id": "waxing",
@@ -241,7 +247,9 @@
             "name": "Cheek",
             "desc": ""
           }
-        ]
+        ],
+        "image": "/images/svc-waxing.webp",
+        "imageAlt": "Botanical ingredients: grains, leaves and flowers"
       }
     ],
     "extras": [
