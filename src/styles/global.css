@@ -50,13 +50,12 @@ a:hover { color: var(--color-brand-dark); }
 .card .card-link { margin-top: auto; font-weight: 600; }
 .card img { max-height: 120px; width: auto; margin-bottom: 1rem; }
 
-/* Page header band using the salon's banner photography */
-.page-hero { position: relative; background: var(--color-sand) center / cover no-repeat; padding: clamp(3rem, 8vw, 5.5rem) 0; }
-.page-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(250,247,240,.96) 0%, rgba(250,247,240,.88) 45%, rgba(250,247,240,0) 80%); }
+/* Page header band with original botanical illustration */
+.page-hero { position: relative; background: var(--color-sand) url(/images/art/hero-corner.svg) right bottom / auto 100% no-repeat; padding: clamp(3rem, 8vw, 5.5rem) 0; overflow: hidden; }
 .page-hero .wrap { position: relative; }
 .page-hero h1 { margin-bottom: .3em; }
 .page-hero p { max-width: 36rem; font-size: 1.15rem; color: var(--color-muted); margin: 0; }
-@media (max-width: 700px) { .page-hero::before { background: rgba(250,247,240,.9); } }
+@media (max-width: 700px) { .page-hero { background-size: auto 60%; background-position: right -40px bottom; } .page-hero .wrap { padding-bottom: 3rem; } }
 
 .prose { max-width: 44rem; }
 .prose img { border-radius: var(--radius); margin: 1.5rem 0; }
