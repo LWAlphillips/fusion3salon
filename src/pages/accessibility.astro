@@ -1,0 +1,22 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import site from "../content/site.json";
+const b = site.business;
+---
+<Base title="Accessibility" description="Fusion 3 Salon's commitment to an accessible website for everyone.">
+  <PageHero title="Accessibility" />
+  <section class="section">
+    <div class="wrap prose">
+      <p>Fusion 3 Salon wants everyone to be able to learn about our services and book with us. This website is designed to conform to the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA. It supports keyboard navigation and screen readers, uses readable color contrast, and respects reduced-motion settings.</p>
+      <p>Online booking and gift card purchases are provided by our booking partner on their own website. If anything there gets in your way, we're glad to help.</p>
+      <h2>Need help or found a problem?</h2>
+      <p>If you have trouble using any part of this site, or need information in another format, please contact us and we'll assist you directly, including booking your appointment for you.</p>
+      <ul>
+        <li>Call <a href={`tel:${b.phoneHref}`}>{b.phone}</a></li>
+        <li>Text <a href={`sms:${b.textHref}`}>{b.text}</a></li>
+        <li>Email <a href={`mailto:${b.email}`}>{b.email}</a></li>
+      </ul>
+    </div>
+  </section>
+</Base>

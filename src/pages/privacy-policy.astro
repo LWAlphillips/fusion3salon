@@ -1,0 +1,20 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import site from "../content/site.json";
+const b = site.business;
+---
+<Base title="Privacy Policy" description="How Fusion 3 Salon handles information on fusion3salon.com.">
+  <PageHero title="Privacy policy" />
+  <section class="section">
+    <div class="wrap prose">
+      <p>This website is informational. It has no accounts or logins and does not collect personal information through forms.</p>
+      <h2>Booking and gift cards</h2>
+      <p>Appointments and gift card purchases are handled by our booking provider on its own website, under its own privacy policy. Information you give there is used to schedule and manage your appointments and purchases.</p>
+      <h2>Site analytics</h2>
+      <p>We may use privacy-friendly analytics to count page visits and improve the site. This data is aggregated and is not used to identify you.</p>
+      <h2>Contact</h2>
+      <p>Questions about your information? Email <a href={`mailto:${b.email}`}>{b.email}</a> or call <a href={`tel:${b.phoneHref}`}>{b.phone}</a>.</p>
+    </div>
+  </section>
+</Base>

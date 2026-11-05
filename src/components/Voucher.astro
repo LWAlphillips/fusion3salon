@@ -1,0 +1,61 @@
+---
+import site from "../content/site.json";
+interface Props { amount: string; label: string; headline: string; text: string; finePrint: string[]; shareText?: string; }
+const { amount, label, headline, text, finePrint, shareText } = Astro.props;
+const b = site.business;
+---
+<div class="voucher" role="group" aria-label={`${label} voucher`}>
+  <div class="v-top">
+    <img src="/images/logo.png" alt={b.name} width="88" height="60" />
+    <p class="v-label">{label}</p>
+  </div>
+  <p class="v-amount">{amount}</p>
+  <h2>{headline}</h2>
+  <p>{text}</p>
+  <p class="v-addr"><strong>{b.name}</strong> · {b.street}, {b.city} · {b.phone}</p>
+  <ul class="v-fine">{finePrint.map(f => <li>{f}</li>)}</ul>
+</div>
+
+<div class="btn-row v-actions">
+  {shareText && (
+    <button class="btn btn--primary" type="button" id="share" data-text={shareText}>Send to a friend</button>
+  )}
+  <a class="btn btn--primary" href={b.bookingUrl}>Book your visit</a>
+  <button class="btn btn--ghost" type="button" onclick="window.print()">Print</button>
+</div>
+<p class="muted v-status" id="share-status" role="status" aria-live="polite"></p>
+
+<script>
+  const btn = document.getElementById("share") as HTMLButtonElement | null;
+  const status = document.getElementById("share-status");
+  btn?.addEventListener("click", async () => {
+    const url = location.href;
+    const text = btn.dataset.text ?? "";
+    if (navigator.share) {
+      try { await navigator.share({ title: "Fusion 3 Salon voucher", text, url }); } catch { /* cancelled */ }
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(`${text} ${url}`);
+      if (status) status.textContent = "Link copied. Paste it into a text or email to your friend.";
+    } catch {
+      location.href = `sms:?&body=${encodeURIComponent(`${text} ${url}`)}`;
+    }
+  });
+</script>
+
+<style>
+  .voucher { background: var(--color-surface); border: 2px dashed var(--color-leaf); border-radius: var(--radius); padding: clamp(1.5rem, 4vw, 2.75rem); max-width: 40rem; }
+  .v-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .v-top img { height: 60px; width: auto; }
+  .v-label { font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; color: var(--color-leaf); margin: 0; }
+  .v-amount { font-family: var(--font-heading); font-size: clamp(4rem, 12vw, 6.5rem); line-height: 1; color: var(--color-brand); margin: 1rem 0 .5rem; }
+  .v-addr { font-size: .95rem; }
+  .v-fine { font-size: .85rem; color: var(--color-muted); padding-left: 1.1rem; margin: 1rem 0 0; }
+  .v-actions { margin-top: 1.5rem; }
+  button.btn { cursor: pointer; font: inherit; font-weight: 600; }
+  @media print {
+    :global(header.site), :global(footer.site), :global(.skip), :global(.announce), :global(.page-hero), .v-actions, .v-status, :global(.no-print) { display: none !important; }
+    .voucher { border-color: #000; }
+  }
+</style>

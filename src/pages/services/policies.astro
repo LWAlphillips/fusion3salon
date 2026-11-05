@@ -1,0 +1,15 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../../components/PageHero.astro";
+import site from "../../content/site.json";
+---
+<Base title="Salon Policies" description="Booking, cancellation and new guest policies at Fusion 3 Salon in Pleasanton.">
+  <PageHero title="Salon policies" intro="A few simple guidelines so every guest gets our full attention." />
+  <section class="section">
+    <div class="wrap prose">
+      <ul class="list-clean checks">{site.policies.map(p => <li>{p}</li>)}</ul>
+      <p>Questions? Text us at <a href={`sms:${site.business.textHref}`}>{site.business.text}</a>.</p>
+      <a class="btn btn--primary" href={site.business.bookingUrl}>Book an appointment</a>
+    </div>
+  </section>
+</Base>

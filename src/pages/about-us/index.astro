@@ -1,0 +1,56 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../../components/PageHero.astro";
+import site from "../../content/site.json";
+const b = site.business;
+---
+<Base title="About Us, Aveda & Davines" description={`Fusion 3 Salon has served Pleasanton and the Tri-Valley since ${b.since}. A team-based Aveda and Davines salon, voted East Bay Times Best in East Bay.`}>
+  <PageHero title="About Fusion 3" intro={`Serving Pleasanton and the Tri-Valley since ${b.since}.`} image="/images/banner-green.webp" />
+
+  <section class="section">
+    <div class="wrap grid grid--2">
+      <div class="prose">
+        <h2>Different by design</h2>
+        <p>Our goal is simple: make your Fusion 3 visit different from any other salon experience. We promise to exceed your expectations. If you don't receive the best salon service you've ever had, we'll refund your money, no questions asked.</p>
+        <p>How can we promise that? Most salons rent chairs or pay stylists commission on what you spend. Fusion 3 rewards our whole team when you come back, when you refer friends, and when everyone works together. We're focused on you, not on a sales number.</p>
+        <p>That means you're welcome to see more than one stylist and get a fresh perspective. If you need to reschedule, our whole team is available to fit you in. And every stylist has completed our in-house training program.</p>
+      </div>
+      <div class="awards-box">
+        <img src="/images/award-best-in-east-bay-2026.png" alt="East Bay Times Best in East Bay 2026" width="400" height="356" loading="lazy" />
+        <img src="/images/award-hall-of-fame-11-years.png" alt="East Bay Times Best of East Bay Hall of Fame, 11 years" width="400" height="337" loading="lazy" />
+        <p class="muted">Voted Best in East Bay 2026 and an 11-year member of the East Bay Times Best of East Bay Hall of Fame.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sand" id="brands">
+    <div class="wrap">
+      <p class="eyebrow">Our brands</p>
+      <h2>Aveda and Davines</h2>
+      <div class="grid grid--2" style="align-items:start;margin-top:1.5rem">
+        <article class="card" id="aveda">
+          <h3>Aveda</h3>
+          <p>Aveda makes plant- and flower-based hair care and color with a mission of caring for the world we live in. Every Aveda visit includes signature rituals: a cup of Aveda Comforting Tea, Elemental Nature aromas, a stress-relieving scalp, neck and shoulder massage, and a finishing touch.</p>
+        </article>
+        <article class="card" id="davines">
+          <h3>Davines</h3>
+          <p>Founded in Parma, Italy, Davines creates high-performance salon hair care around "sustainable beauty": natural, high-grade ingredients, scientific rigor and a commitment to caring for people and the planet. Ask your stylist which Davines ritual fits your hair.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap btn-row" style="align-items:center">
+      <h2 style="margin:0 1rem 0 0">Come see for yourself.</h2>
+      <a class="btn btn--primary" href={b.bookingUrl}>Book an appointment</a>
+      <a class="btn btn--ghost" href="/about-us/careers/">Join our team</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .awards-box { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; text-align: center; }
+  .awards-box img { width: 44%; max-width: 210px; }
+  .awards-box p { flex-basis: 100%; }
+</style>

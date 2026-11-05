@@ -1,0 +1,115 @@
+---
+import Base from "../layouts/Base.astro";
+import site from "../content/site.json";
+const b = site.business;
+const today = new Date().toISOString().slice(0, 10);
+const featured = site.featured.filter(f => !f.ends || f.ends >= today);
+const years = new Date().getFullYear() - b.since;
+---
+<Base>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Downtown Pleasanton · Since {b.since}</p>
+        <h1>Hair you'll love, from a team that's been voted the East Bay's best.</h1>
+        <p class="lead">Fusion 3 is an Aveda and Davines salon on Main Street. For {years}+ years we've been doing cuts, color, balayage and extensions with plant-based products and a team that works together for you.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href={b.bookingUrl}>Book an appointment</a>
+          <a class="btn btn--ghost" href={`sms:${b.textHref}`}>Text us {b.text}</a>
+        </div>
+      </div>
+      <div class="hero-awards">
+        <img src="/images/award-best-in-east-bay-2026.png" alt="East Bay Times Best in East Bay 2026" width="400" height="356" />
+        <img src="/images/award-hall-of-fame-11-years.png" alt="East Bay Times Best of East Bay Hall of Fame, 11 years" width="400" height="337" />
+      </div>
+    </div>
+    <div class="hero-band" role="img" aria-label="Two guests with rich brunette and golden blonde hair"></div>
+  </section>
+
+  {featured.length > 0 && (
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Featured</p>
+        <h2>What's new at Fusion 3</h2>
+        <div class="grid grid--3" style="margin-top:1.5rem">
+          {featured.map(f => (
+            <article class="card" data-ends={f.ends || undefined}>
+              {f.image && <img src={f.image} alt={f.imageAlt} loading="lazy" />}
+              <h3>{f.title}</h3>
+              <p>{f.text}</p>
+              {f.linkUrl && <a class="card-link" href={f.linkUrl}>{f.linkText} <span aria-hidden="true">→</span></a>}
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section section--sand">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h2>Everything your hair needs</h2>
+      <div class="grid grid--3" style="margin-top:1.5rem">
+        {site.services.groups.map(g => (
+          <a class="card svc" href={`/services/#${g.id}`}>
+            <h3>{g.name}</h3>
+            <p>{g.intro}</p>
+            <span class="card-link">See {g.name.toLowerCase()} <span aria-hidden="true">→</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid grid--2">
+      <div>
+        <p class="eyebrow">Why Fusion 3</p>
+        <h2>A salon built around you, not commission</h2>
+        <p>Most salons rent chairs or pay stylists commission. We don't. Our whole team is rewarded for exceeding your expectations, so you're welcome to see any stylist, reschedule without a six-week wait, and get honest advice.</p>
+        <ul class="list-clean checks">
+          <li>Every stylist completes our in-house training program</li>
+          <li>Aveda rituals with every visit: tea, aromas, a stress-relieving massage</li>
+          <li>Plant-based Aveda color and sustainable Davines care</li>
+          <li>Our promise: the best salon service you've ever had, or your money back</li>
+        </ul>
+        <a class="btn btn--ghost" href="/about-us/">About us</a>
+      </div>
+      <img class="rounded" src="/images/banner-botanical-lavender.webp" alt="Lavender, rosemary and botanical ingredients" width="1600" height="350" loading="lazy" />
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Visit us</p>
+        <h2>722 Main Street, Pleasanton</h2>
+        <p>In the heart of downtown Pleasanton. Open seven days, with early mornings and evenings to fit your schedule.</p>
+        <div class="btn-row">
+          <a class="btn btn--ghost" href={b.mapUrl}>Get directions</a>
+          <a class="btn btn--ghost" href={`tel:${b.phoneHref}`}>Call {b.phone}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const today = new Date().toISOString().slice(0, 10);
+    document.querySelectorAll<HTMLElement>("[data-ends]").forEach(el => { if ((el.dataset.ends ?? "") < today) el.hidden = true; });
+  </script>
+</Base>
+
+<style>
+  .hero { padding-top: clamp(2.5rem, 6vw, 4.5rem); }
+  .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 2.5rem; align-items: center; padding-bottom: 2.5rem; }
+  .hero h1 { margin-bottom: .4em; }
+  .hero .lead { margin-bottom: 1.75rem; }
+  .hero-awards { display: flex; gap: 1rem; justify-content: center; align-items: center; }
+  .hero-awards img { width: 46%; max-width: 200px; }
+  .hero-band { height: clamp(140px, 22vw, 320px); background: url(/images/banner-two-tones.webp) center / cover no-repeat; }
+  @media (max-width: 800px) { .hero-grid { grid-template-columns: 1fr; } .hero-awards img { max-width: 150px; } }
+  .svc { text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+  .svc:hover { border-color: var(--color-brand); color: inherit; }
+  .svc .card-link { color: var(--color-brand); }
+  .rounded { border-radius: var(--radius); aspect-ratio: 4 / 3; object-fit: cover; object-position: right; width: 100%; }
+</style>

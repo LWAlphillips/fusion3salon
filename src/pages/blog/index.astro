@@ -1,0 +1,22 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../../components/PageHero.astro";
+import posts from "../../content/posts.json";
+const fmt = (d: string) => new Date(d + "T12:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long" });
+---
+<Base title="Journal" description="Hair tips, Aveda and Davines news and stories from Fusion 3 Salon in Pleasanton.">
+  <PageHero title="Journal" intro="Hair tips, product stories and salon news from our archive." />
+  <section class="section">
+    <div class="wrap">
+      <ul class="list-clean grid grid--3">
+        {posts.map(p => (
+          <li class="card">
+            <p class="muted" style="font-size:.9rem;margin:0 0 .4rem">{fmt(p.date)}</p>
+            <h2 style="font-size:1.3rem"><a href={`/${p.slug}/`}>{p.title}</a></h2>
+            <p>{p.excerpt}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</Base>

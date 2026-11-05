@@ -1,0 +1,19 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../../components/PageHero.astro";
+import site from "../../content/site.json";
+---
+<Base title="Specials, Referral Rewards & Gift Cards" description="$20 off your first service, $50 for every friend you refer, and gift cards from Fusion 3 Salon in Pleasanton.">
+  <PageHero title="Specials" intro="A little thank-you for trying us, sharing us, and gifting us." image="/images/banner-botanical-lavender.webp" />
+  <section class="section">
+    <div class="wrap grid grid--3">
+      {site.specials.map(s => (
+        <article class="card">
+          <h2 style="font-size:1.5rem">{s.title}</h2>
+          <p>{s.text}</p>
+          <a class="btn btn--primary" href={s.linkUrl} style="margin-top:auto">{s.linkText}</a>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>

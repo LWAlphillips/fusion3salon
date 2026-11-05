@@ -1,0 +1,298 @@
+{
+  "_README": "This is the ONE file to edit for everyday website changes (hours, phone, specials, featured promos, services). See EDITING.md. After saving, the live site updates in about a minute.",
+  "business": {
+    "name": "Fusion 3 Salon",
+    "tagline": "An Aveda & Davines salon in downtown Pleasanton",
+    "since": 2000,
+    "street": "722 Main Street",
+    "city": "Pleasanton",
+    "state": "CA",
+    "zip": "94566",
+    "phone": "(925) 600-0080",
+    "phoneHref": "+19256000080",
+    "text": "(925) 303-4874",
+    "textHref": "+19253034874",
+    "email": "pleasanton@fusion3salon.com",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=Fusion+3+Salon+722+Main+Street+Pleasanton+CA+94566",
+    "bookingUrl": "https://fusion3.bookedby.com",
+    "giftCardUrl": "https://fusion3.bookedby.com/gift-cards-purchase",
+    "social": {
+      "instagram": "https://www.instagram.com/Fusion3Salon",
+      "facebook": "https://www.facebook.com/Fusion3Salons",
+      "yelp": "https://www.yelp.com/biz/fusion-3-salon-pleasanton"
+    }
+  },
+  "hours": [
+    {
+      "day": "Monday",
+      "open": "6:00 AM",
+      "close": "5:00 PM"
+    },
+    {
+      "day": "Tuesday",
+      "open": "6:00 AM",
+      "close": "8:00 PM"
+    },
+    {
+      "day": "Wednesday",
+      "open": "6:00 AM",
+      "close": "8:00 PM"
+    },
+    {
+      "day": "Thursday",
+      "open": "6:00 AM",
+      "close": "8:00 PM"
+    },
+    {
+      "day": "Friday",
+      "open": "6:00 AM",
+      "close": "5:00 PM"
+    },
+    {
+      "day": "Saturday",
+      "open": "6:00 AM",
+      "close": "5:00 PM"
+    },
+    {
+      "day": "Sunday",
+      "open": "8:00 AM",
+      "close": "5:00 PM"
+    }
+  ],
+  "hoursNote": "Hours may vary on holidays. Text us anytime.",
+  "announcement": {
+    "_help": "Optional thin bar at the very top of every page. Set show to false to hide it.",
+    "show": false,
+    "text": "Holiday gift cards are here — the easiest gift you'll give all year.",
+    "linkText": "Buy a gift card",
+    "linkUrl": "https://fusion3.bookedby.com/gift-cards-purchase"
+  },
+  "featured": [
+    {
+      "_help": "Homepage 'Featured' cards for product launches, promos and events. Add, remove or reorder. 'ends' (YYYY-MM-DD) is optional; the card hides itself after that date. 'image' is optional (put the file in public/images/).",
+      "title": "Best in East Bay, again",
+      "text": "Thank you for voting us East Bay Times Best in East Bay 2026 — and for 11 years in the Best of East Bay Hall of Fame.",
+      "linkText": "Book your visit",
+      "linkUrl": "https://fusion3.bookedby.com",
+      "image": "/images/award-best-in-east-bay-2026.png",
+      "imageAlt": "East Bay Times Best in East Bay 2026 award",
+      "ends": ""
+    },
+    {
+      "title": "$20 off your first service with us",
+      "text": "New to Fusion 3? Here's $20 toward any service you've never had with us before.",
+      "linkText": "Get your $20 voucher",
+      "linkUrl": "/specials/new-guest/",
+      "image": "",
+      "imageAlt": "",
+      "ends": ""
+    },
+    {
+      "title": "Give the Fusion 3 experience",
+      "text": "Gift cards for any amount, delivered by email in minutes.",
+      "linkText": "Buy a gift card",
+      "linkUrl": "https://fusion3.bookedby.com/gift-cards-purchase",
+      "image": "",
+      "imageAlt": "",
+      "ends": ""
+    }
+  ],
+  "specials": [
+    {
+      "title": "$20 New Guest Offer",
+      "text": "Here's $20 on us toward any service you've never had with us before.",
+      "linkText": "Get your $20 voucher",
+      "linkUrl": "/specials/new-guest/"
+    },
+    {
+      "title": "Refer a Friend, Get $50",
+      "text": "Send a friend our way. When they come in for their first visit, you get a $50 Fusion 3 salon credit.",
+      "linkText": "Send a referral voucher",
+      "linkUrl": "/specials/refer/"
+    },
+    {
+      "title": "Gift Cards",
+      "text": "Share the Fusion 3 experience with the people you love. Any amount, delivered by email.",
+      "linkText": "Buy a gift card",
+      "linkUrl": "https://fusion3.bookedby.com/gift-cards-purchase"
+    }
+  ],
+  "services": {
+    "pricingNote": "Current prices for every service are shown when you book online. Prices are \"starting at\" and may vary for very long or thick hair or anything that needs extra time or product. Not sure what you need? Book a complimentary consultation.",
+    "groups": [
+      {
+        "id": "cuts",
+        "name": "Cuts & Styling",
+        "intro": "Every haircut includes a stress-relieving Aveda scalp, neck and shoulder treatment, a luxurious shampoo, light conditioning and a blow-dry style.",
+        "items": [
+          {
+            "name": "Haircut",
+            "desc": "Includes treatment, shampoo and blow-dry style."
+          },
+          {
+            "name": "Child's Cut",
+            "desc": "Ages 12 and under."
+          },
+          {
+            "name": "Bang Trim",
+            "desc": "Complimentary for existing guests."
+          },
+          {
+            "name": "Blow-Dry Style",
+            "desc": "Shampoo and style, no cut."
+          },
+          {
+            "name": "Special Event Styling",
+            "desc": "Up-dos and styling for weddings and events."
+          },
+          {
+            "name": "Deep Conditioning",
+            "desc": "Add to any service, or on its own."
+          },
+          {
+            "name": "Thermal Styling Add-on",
+            "desc": "Curl or straighten to finish any service."
+          },
+          {
+            "name": "Consultation",
+            "desc": "Complimentary for everyone, and required for new guests."
+          }
+        ]
+      },
+      {
+        "id": "color",
+        "name": "Color",
+        "intro": "We color with Aveda's plant- and flower-derived haircolor.",
+        "items": [
+          {
+            "name": "Partial Highlight",
+            "desc": "Lighter, brighter dimension on top and around the face — natural or high-contrast."
+          },
+          {
+            "name": "Full Highlight",
+            "desc": "Dimension all over, including underneath, for guests who wear their hair up."
+          },
+          {
+            "name": "Balayage",
+            "desc": "Hand-painted, soft, lived-in color. Consultation recommended."
+          },
+          {
+            "name": "Demi-Color",
+            "desc": "Ammonia-free, 99% plant-derived color that refreshes tone and adds shine. Does not lighten or fully cover grey."
+          },
+          {
+            "name": "Permanent Touch-up",
+            "desc": "Root touch-up for single-process color and full grey coverage."
+          },
+          {
+            "name": "All-Over Permanent Color",
+            "desc": "First time with color? Beautiful, even color with subtle tonal variation."
+          },
+          {
+            "name": "Color Correction",
+            "desc": "Made a mistake? We can help. Consultation required."
+          },
+          {
+            "name": "Color Add-ons",
+            "desc": "Add demi-color or a few highlights to any color service."
+          }
+        ]
+      },
+      {
+        "id": "texture",
+        "name": "Extensions & Texture",
+        "intro": "These services require a consultation first so we can plan the right approach for your hair.",
+        "items": [
+          {
+            "name": "Hair Extensions",
+            "desc": "Great Lengths, tape-in, laced and woven extensions."
+          },
+          {
+            "name": "Smoothing & Straightening",
+            "desc": "Brazilian Blowout, relaxing and straightening."
+          },
+          {
+            "name": "Permanent Waves",
+            "desc": "Partial, full-head, spiral and specialty perms."
+          }
+        ]
+      },
+      {
+        "id": "waxing",
+        "name": "Waxing",
+        "intro": "Quick, gentle facial waxing.",
+        "items": [
+          {
+            "name": "Brows",
+            "desc": "Shaping and clean-up. First visit includes a brow consultation."
+          },
+          {
+            "name": "Lip",
+            "desc": ""
+          },
+          {
+            "name": "Chin",
+            "desc": ""
+          },
+          {
+            "name": "Cheek",
+            "desc": ""
+          }
+        ]
+      }
+    ],
+    "extras": [
+      "Bridal and event services are available — text us to plan your day.",
+      "New Talent stylists are fully licensed cosmetologists completing our in-house certification program, at a lower price point."
+    ]
+  },
+  "policies": [
+    "Please give at least 24 hours' notice to cancel or reschedule. Late cancellations and no-shows are charged 50% of the reserved services. Contract appointments (such as bridal) may require longer notice.",
+    "A credit card is required to reserve all appointments.",
+    "New guests please book a complimentary consultation with your first appointment, so we have time to get to know you.",
+    "We love animals, but as a courtesy to all guests, service animals only please."
+  ],
+  "careers": {
+    "intro": "Love doing hair but feel stuck with an empty book or a commission-only model? At Fusion 3 you're part of a team, not renting a chair: great pay, bonuses for exceeding guests' expectations, a high-end clientele, ongoing education and the room to grow quickly.",
+    "roles": [
+      {
+        "title": "Hair Stylists",
+        "text": "Experienced stylists who want a high-end clientele, a supportive team and room to grow."
+      },
+      {
+        "title": "New Talent Stylists",
+        "text": "Newly licensed? Our in-house certification program gets you on the floor fast with real mentorship."
+      },
+      {
+        "title": "Salon Coordinators",
+        "text": "Warm, upbeat people who love making a great first impression and keeping the day running smoothly."
+      }
+    ],
+    "applyText": "Email your résumé to pleasanton@fusion3salon.com or stop by the salon.",
+    "applicationPdf": "/wp-content/uploads/2015/03/F3OnlineApp.pdf"
+  },
+  "vouchers": {
+    "_help": "Wording and fine print for the printable/shareable voucher pages at /specials/new-guest/ and /specials/refer/.",
+    "newGuest": {
+      "amount": "$20",
+      "headline": "$20 toward your first service",
+      "text": "Try something you've never had with us before — a cut, color, balayage, waxing or a blowout. Show this voucher on your phone or bring it printed.",
+      "finePrint": [
+        "New guests and first-time services only.",
+        "One voucher per guest. Not valid with other offers or on retail products.",
+        "No cash value."
+      ]
+    },
+    "referral": {
+      "amount": "$50",
+      "headline": "Your friend thinks you'll love Fusion 3",
+      "text": "Show this voucher at your first visit and tell us who sent you. As a thank-you, your friend receives a $50 Fusion 3 salon credit.",
+      "shareText": "I love my salon, Fusion 3 in Pleasanton. Show them this voucher at your first visit and tell them I sent you:",
+      "finePrint": [
+        "Valid for guests new to Fusion 3 Salon.",
+        "The $50 credit goes to the referring guest after their friend's first completed service.",
+        "Credits have no cash value and can't be combined with other offers."
+      ]
+    }
+  }
+}

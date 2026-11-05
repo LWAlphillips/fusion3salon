@@ -1,0 +1,45 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../../components/PageHero.astro";
+import site from "../../content/site.json";
+const s = site.services;
+---
+<Base title="Hair Services: Cuts, Color, Balayage & Waxing" description="Haircuts, Aveda color, highlights, balayage, extensions, smoothing and waxing at Fusion 3 Salon in downtown Pleasanton. See services and book online.">
+  <PageHero title="Services" intro="Cuts, color, extensions and waxing, all with Aveda and Davines products." image="/images/banner-sky.webp" />
+  <section class="section">
+    <div class="wrap">
+      <nav aria-label="Service categories" class="jump">
+        {s.groups.map(g => <a href={`#${g.id}`}>{g.name}</a>)}
+        <a href="/services/policies/">Policies</a>
+      </nav>
+      <p class="note">{s.pricingNote}</p>
+      <div class="btn-row"><a class="btn btn--primary" href={site.business.bookingUrl}>See prices &amp; book</a></div>
+
+      {s.groups.map(g => (
+        <section class="group" id={g.id} aria-labelledby={`${g.id}-h`}>
+          <h2 id={`${g.id}-h`}>{g.name}</h2>
+          <p class="muted">{g.intro}</p>
+          <dl class="menu">
+            {g.items.map(i => (<div><dt>{i.name}</dt>{i.desc && <dd>{i.desc}</dd>}</div>))}
+          </dl>
+        </section>
+      ))}
+
+      <section class="group" aria-label="Good to know">
+        <ul class="list-clean checks">{s.extras.map(e => <li>{e}</li>)}</ul>
+        <p><a href="/services/policies/">Read our booking and cancellation policies</a></p>
+      </section>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .jump { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
+  .jump a { padding: .5rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-button); text-decoration: none; background: var(--color-surface); }
+  .note { max-width: 44rem; color: var(--color-muted); }
+  .group { padding-top: 3rem; scroll-margin-top: 90px; }
+  .menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 2.5rem; margin: 1.25rem 0 0; }
+  .menu > div { padding: 1rem 0; border-bottom: 1px solid var(--color-border); }
+  dt { font-weight: 600; }
+  dd { margin: .2rem 0 0; color: var(--color-muted); }
+</style>

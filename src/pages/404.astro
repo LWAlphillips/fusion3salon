@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/Base.astro";
+import site from "../content/site.json";
+---
+<Base title="Page not found">
+  <section class="section">
+    <div class="wrap prose">
+      <h1>We couldn't find that page.</h1>
+      <p>It may have moved when we refreshed our website.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href={site.business.bookingUrl}>Book an appointment</a>
+        <a class="btn btn--ghost" href="/">Go to the homepage</a>
+      </div>
+    </div>
+  </section>
+</Base>

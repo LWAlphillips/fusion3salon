@@ -1,0 +1,40 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import site from "../content/site.json";
+const b = site.business;
+---
+<Base title="Visit & Contact: 722 Main Street, Pleasanton" description="Fusion 3 Salon, 722 Main Street in downtown Pleasanton, CA. Hours, directions, phone and text. Open seven days a week.">
+  <PageHero title="Visit us" intro="On Main Street in downtown Pleasanton, open seven days a week." image="/images/banner-botanical-seeds.webp" />
+  <section class="section">
+    <div class="wrap grid grid--2" style="align-items:start">
+      <div>
+        <h2>Find us</h2>
+        <p style="font-size:1.15rem">{b.street}<br />{b.city}, {b.state} {b.zip}</p>
+        <p><a class="btn btn--ghost" href={b.mapUrl}>Get directions</a></p>
+        <h2 style="margin-top:2rem">Get in touch</h2>
+        <ul class="list-clean contact">
+          <li><span>Call</span> <a href={`tel:${b.phoneHref}`}>{b.phone}</a></li>
+          <li><span>Text</span> <a href={`sms:${b.textHref}`}>{b.text}</a></li>
+          <li><span>Email</span> <a href={`mailto:${b.email}`}>{b.email}</a></li>
+        </ul>
+        <div class="btn-row" style="margin-top:1.5rem">
+          <a class="btn btn--primary" href={b.bookingUrl}>Book online</a>
+          <a class="btn btn--ghost" href={b.giftCardUrl}>Buy a gift card</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Hours</h2>
+        <table class="hours">
+          <caption class="sr-only">Salon hours</caption>
+          <tbody>{site.hours.map(h => <tr><th scope="row">{h.day}</th><td>{h.open ? `${h.open} – ${h.close}` : "Closed"}</td></tr>)}</tbody>
+        </table>
+        <p class="muted" style="margin:1rem 0 0">{site.hoursNote}</p>
+      </div>
+    </div>
+  </section>
+</Base>
+<style>
+  .contact li { padding: .55rem 0; border-bottom: 1px solid var(--color-border); }
+  .contact span { display: inline-block; width: 4.5rem; color: var(--color-muted); }
+</style>

@@ -1,0 +1,13 @@
+---
+import Base from "../../layouts/Base.astro";
+import PageHero from "../../components/PageHero.astro";
+import Voucher from "../../components/Voucher.astro";
+import site from "../../content/site.json";
+const v = site.vouchers.newGuest;
+---
+<Base title="$20 New Guest Voucher" description="New to Fusion 3 Salon? Here's $20 toward a service you've never had with us before.">
+  <PageHero title="$20 new guest voucher" intro="Show this page at the front desk, or print it." />
+  <section class="section"><div class="wrap">
+    <Voucher amount={v.amount} label="New guest voucher" headline={v.headline} text={v.text} finePrint={v.finePrint} />
+  </div></section>
+</Base>

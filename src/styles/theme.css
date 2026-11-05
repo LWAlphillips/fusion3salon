@@ -1,0 +1,28 @@
+/*
+  THEME — the look of the whole site lives here.
+  Change a value below and every page updates. Keep text colors dark enough
+  to read on the background (contrast ratio of at least 4.5:1) for accessibility.
+*/
+:root {
+  /* Colors */
+  --color-bg: #faf7f0;          /* page background (warm cream) */
+  --color-surface: #ffffff;     /* cards */
+  --color-sand: #efe8da;        /* soft section background */
+  --color-text: #1f2a24;        /* main text */
+  --color-muted: #4e5a53;       /* secondary text */
+  --color-brand: #0b5f7c;       /* Fusion 3 blue (deepened from the logo for readability) */
+  --color-brand-dark: #08485e;  /* button hover */
+  --color-leaf: #3f6b1d;        /* Fusion 3 green accent */
+  --color-forest: #1e3a2c;      /* dark sections and footer */
+  --color-on-dark: #f4f1e8;     /* text on dark sections */
+  --color-border: #ddd5c4;
+
+  /* Fonts */
+  --font-heading: "Fraunces Variable", Georgia, serif;
+  --font-body: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Shape & spacing */
+  --radius: 14px;               /* card corners */
+  --radius-button: 999px;       /* 999px = pill buttons, 8px = squarer */
+  --max-width: 1120px;
+}
