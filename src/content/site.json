@@ -84,8 +84,8 @@
       "text": "New to Fusion 3? Here's $20 toward any service you've never had with us before.",
       "linkText": "Get your $20 voucher",
       "linkUrl": "/specials/new-guest/",
-      "image": "/images/art/feature-voucher.svg",
-      "imageAlt": "",
+      "image": "/images/featured-new-guest.webp",
+      "imageAlt": "Guest with long, tousled golden blonde hair against a blue sky",
       "ends": "",
       "imageFit": "cover"
     },
@@ -94,8 +94,8 @@
       "text": "Gift cards for any amount, delivered by email in minutes.",
       "linkText": "Buy a gift card",
       "linkUrl": "https://fusion3.bookedby.com/gift-cards-purchase",
-      "image": "/images/art/feature-giftcard.svg",
-      "imageAlt": "",
+      "image": "/images/featured-gift-cards.webp",
+      "imageAlt": "Lavender and rosemary in a wooden bowl",
       "ends": "",
       "imageFit": "cover"
     }
@@ -161,8 +161,8 @@
             "desc": "Complimentary for everyone, and required for new guests."
           }
         ],
-        "image": "/images/art/icon-cuts.svg",
-        "imageAlt": ""
+        "image": "/images/svc-cuts.webp",
+        "imageAlt": "Platinum bob with blue color panels"
       },
       {
         "id": "color",
@@ -202,8 +202,8 @@
             "desc": "Add demi-color or a few highlights to any color service."
           }
         ],
-        "image": "/images/art/icon-color.svg",
-        "imageAlt": ""
+        "image": "/images/svc-color.webp",
+        "imageAlt": "Rich brunette and golden blonde hair side by side"
       },
       {
         "id": "texture",
@@ -223,8 +223,8 @@
             "desc": "Partial, full-head, spiral and specialty perms."
           }
         ],
-        "image": "/images/art/icon-texture.svg",
-        "imageAlt": ""
+        "image": "/images/svc-texture.webp",
+        "imageAlt": "Long, sleek platinum blonde hair"
       },
       {
         "id": "waxing",
@@ -248,8 +248,8 @@
             "desc": ""
           }
         ],
-        "image": "/images/art/icon-waxing.svg",
-        "imageAlt": ""
+        "image": "/images/svc-waxing.webp",
+        "imageAlt": "Botanical ingredients: grains, leaves and flowers"
       }
     ],
     "extras": [
