@@ -24,7 +24,7 @@ const years = new Date().getFullYear() - b.since;
         <img src="/images/award-hall-of-fame-11-years.png" alt="East Bay Times Best of East Bay Hall of Fame, 11 years" width="400" height="337" />
       </div>
     </div>
-    <div class="hero-band" role="img" aria-label="Two guests with rich brunette and golden blonde hair"></div>
+    <div class="hero-band" aria-hidden="true"></div>
   </section>
 
   {featured.length > 0 && (
@@ -110,7 +110,7 @@ const years = new Date().getFullYear() - b.since;
   .hero .lead { margin-bottom: 1.75rem; }
   .hero-awards { display: flex; gap: 1rem; justify-content: center; align-items: center; }
   .hero-awards img { width: 46%; max-width: 200px; }
-  .hero-band { height: clamp(140px, 22vw, 320px); background: url(/images/banner-two-tones.webp) center / cover no-repeat; }
+  .hero-band { height: clamp(140px, 22vw, 320px); background: url(/images/banner-eucalyptus-white.webp) center / cover no-repeat; }
   @media (max-width: 800px) { .hero-grid { grid-template-columns: 1fr; } .hero-awards img { max-width: 150px; } }
   .media { height: 170px; margin: -1.75rem -1.75rem 1.25rem; border-radius: var(--radius) var(--radius) 0 0; overflow: hidden; background: var(--color-sand); display: flex; align-items: center; justify-content: center; }
   .media img { margin: 0; max-height: none; }

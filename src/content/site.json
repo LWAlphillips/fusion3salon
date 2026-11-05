@@ -85,7 +85,7 @@
       "linkText": "Get your $20 voucher",
       "linkUrl": "/specials/new-guest/",
       "image": "/images/featured-new-guest.webp",
-      "imageAlt": "Guest with long, tousled golden blonde hair against a blue sky",
+      "imageAlt": "Dried eucalyptus sprig on a warm two-tone background",
       "ends": "",
       "imageFit": "cover"
     },
@@ -162,7 +162,7 @@
           }
         ],
         "image": "/images/svc-cuts.webp",
-        "imageAlt": "Platinum bob with blue color panels"
+        "imageAlt": "Styling tools, comb and hair care bottles on linen"
       },
       {
         "id": "color",
@@ -203,7 +203,7 @@
           }
         ],
         "image": "/images/svc-color.webp",
-        "imageAlt": "Rich brunette and golden blonde hair side by side"
+        "imageAlt": "Hair color bowl, tint brush and comb"
       },
       {
         "id": "texture",
@@ -224,7 +224,7 @@
           }
         ],
         "image": "/images/svc-texture.webp",
-        "imageAlt": "Long, sleek platinum blonde hair"
+        "imageAlt": "Hair swatch with tint brushes and a color bowl"
       },
       {
         "id": "waxing",
